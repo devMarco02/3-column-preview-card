@@ -1,0 +1,163 @@
+//=============VARIABLES
+:root {
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", cursive;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --fs-h1: 2.45rem;
+  --fs-body: 15px;
+
+  //===colors
+  //primary
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  // neutral
+  --transparent-white: hsla(0, 0%, 100%, 0.75); //paragraphs
+  --very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+}
+
+//=============RESET
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+//=============BASE STYLES (styles that doesn't change whatever the size of the screen)
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  background: var(--very-light-gray);
+}
+
+.cards {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 3rem;
+  p {
+    margin-bottom: 1.5rem;
+  }
+  a {
+    display: inline-block;
+    border-radius: 26px;
+    max-width: 147px;
+    padding: 1rem 2rem;
+    background: var(--very-light-gray);
+  }
+  a:hover {
+    background-color: initial;
+    box-shadow: inset 0 0 0 3px var(--very-light-gray);
+    color: var(--very-light-gray);
+  }
+}
+
+.sedans {
+  background: var(--bright-orange);
+}
+.suvs {
+  background: var(--dark-cyan);
+}
+.luxury {
+  background: var(--very-dark-cyan);
+}
+
+.attribution {
+  color: rgb(31, 31, 31);
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+//============CONTAINERS
+.container {
+  width: 100%;
+  padding: 5rem 1.5rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+@media (min-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    padding: 0 1.5rem;
+    max-width: 960px;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+//=============FONTS
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--transparent-white);
+}
+h1 {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.sedans a {
+  color: var(--bright-orange);
+}
+.suvs a {
+  color: var(--dark-cyan);
+}
+.luxury a {
+  color: var(--very-dark-cyan);
+}
+//=============mobile styles
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+//=============laptop/desktop
+
+@media screen and (min-width: 800px) {
+  .cards {
+    display: flex;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+    min-height: 480px;
+  }
+
+  p {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,181 @@
+:root {
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", cursive;
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --fs-h1: 2.45rem;
+  --fs-body: 15px;
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--very-light-gray);
+}
+
+.cards {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 3rem;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+}
+
+.card a {
+  display: inline-block;
+  border-radius: 26px;
+  max-width: 147px;
+  padding: 1rem 2rem;
+  background: var(--very-light-gray);
+}
+
+.card a:hover {
+  background-color: initial;
+  -webkit-box-shadow: inset 0 0 0 3px var(--very-light-gray);
+          box-shadow: inset 0 0 0 3px var(--very-light-gray);
+  color: var(--very-light-gray);
+}
+
+.sedans {
+  background: var(--bright-orange);
+}
+
+.suvs {
+  background: var(--dark-cyan);
+}
+
+.luxury {
+  background: var(--very-dark-cyan);
+}
+
+.attribution {
+  color: #1f1f1f;
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.container {
+  width: 100%;
+  padding: 5rem 1.5rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    padding: 0 1.5rem;
+    max-width: 960px;
+    margin-bottom: 0;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--transparent-white);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.sedans a {
+  color: var(--bright-orange);
+}
+
+.suvs a {
+  color: var(--dark-cyan);
+}
+
+.luxury a {
+  color: var(--very-dark-cyan);
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 800px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 50vh;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    min-height: 480px;
+  }
+  p {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
